@@ -1,0 +1,13 @@
+Pages model has_one Question association.
+Question belongs_to Pages.
+
+Question has_many Answers.
+Question has a correct answer, column correct_answer which is the id of the correct answer?
+
+Answers can be populated at random for a question to randomize the wrong answers.
+
+How to score?
+Maybe a Score model which associates questions and answers with a user_id and a final score? has_many_through?
+Maybe Pages model is not necessary only need questions and answers.
+
+
