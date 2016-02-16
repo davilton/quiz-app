@@ -11,14 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160208175734) do
+ActiveRecord::Schema.define(version: 20160215160425) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "pages", force: :cascade do |t|
+  create_table "answers", force: :cascade do |t|
+    t.string   "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "pages", force: :cascade do |t|
+    t.integer  "question_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "pages", ["question_id"], name: "index_pages_on_question_id", using: :btree
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "text"
+    t.integer  "answer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "questions", ["answer_id"], name: "index_questions_on_answer_id", using: :btree
 
 end
