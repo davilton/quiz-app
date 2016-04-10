@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'quiz_modules#index'
-  resources :pages, only: [:index, :show]
-
+ 	resources :quiz_modules, only: :index  do 
+		get '/start' => 'pages#start'
+		resources :pages, only: [:index, :show]
+	end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

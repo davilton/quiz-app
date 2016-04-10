@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160301002730) do
+ActiveRecord::Schema.define(version: 20160410182537) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,11 +24,14 @@ ActiveRecord::Schema.define(version: 20160301002730) do
 
   create_table "pages", force: :cascade do |t|
     t.integer  "question_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "quiz_module_id"
+    t.string   "number"
   end
 
   add_index "pages", ["question_id"], name: "index_pages_on_question_id", using: :btree
+  add_index "pages", ["quiz_module_id"], name: "index_pages_on_quiz_module_id", using: :btree
 
   create_table "questions", force: :cascade do |t|
     t.string   "text"
@@ -46,5 +49,21 @@ ActiveRecord::Schema.define(version: 20160301002730) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "scores", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "scorings", force: :cascade do |t|
+    t.integer  "score_id"
+    t.integer  "answer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "scorings", ["answer_id"], name: "index_scorings_on_answer_id", using: :btree
+  add_index "scorings", ["score_id"], name: "index_scorings_on_score_id", using: :btree
+
+  add_foreign_key "pages", "quiz_modules"
   add_foreign_key "questions", "quiz_modules"
 end

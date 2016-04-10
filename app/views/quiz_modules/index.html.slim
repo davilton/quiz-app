@@ -1,5 +1,7 @@
 h2 Quiz Modules
 
 - @modules.each do |mod|
-    p Module #{mod.id}
+  p 
+   |Module #{mod.id}  
+   = link_to "Start", quiz_module_start_path(mod) 
      
