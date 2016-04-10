@@ -1,5 +1,8 @@
 h4 
 	|Page Number = 
 	= @page.number
+  
+-if @page.question
+  p= @page.question.text
 
-	p= next_page @page
+p= next_page @page
