@@ -9,15 +9,10 @@ class PagesController < ApplicationController
 	end
 
 	def start
-		# create a score
-		# go to first page of quiz module
-		#
-		@pages = QuizModule.find(params[:quiz_module_id]).pages.sort_by{|x| x.number.to_i}
+		@quiz = QuizModule.find(params[:quiz_module_id])
+		@pages =@quiz.pages.sort_by{|x| x.number.to_i}
 		@page = @pages.first
-		render :show
+		redirect_to quiz_module_page_path(@quiz, @page)
 	end
 
-	def next
-		# current page.number + 1
-	end
 end
