@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+QuizModule.create title: 'Code of Conduct FY 2017'
+QuizModule.create title: 'CMS Fraud, Waste and Abuse, Part C'
+QuizModule.create title: 'Corporate Integrity Agreement'
+QuizModule.create title: 'Employee Attestation'
+QuizModule.create title: 'Management Certification and Attestation'
