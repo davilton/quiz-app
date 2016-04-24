@@ -1,7 +1,8 @@
-h4 
-	|Page Number = 
-	= @page.number
-  
+h4  
+	= @page.header
+
+= @page.text unless @page.blank?
+
 -if @page.question
   p= @page.question.text
 
