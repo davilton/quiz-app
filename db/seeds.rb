@@ -1,16 +1,15 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+## Quiz Modules
 qm1 = QuizModule.create title: 'Code of Conduct FY 2017'
 qm2 = QuizModule.create title: 'CMS Fraud, Waste and Abuse, Part C'
 qm3 = QuizModule.create title: 'Corporate Integrity Agreement'
 qm4 = QuizModule.create title: 'Employee Attestation'
 qm5 = QuizModule.create title: 'Management Certification and Attestation'
+## END Quiz Modules
 
+## Pages for Module 1 
 Page.create(quiz_module: qm1, number: 1, text: "Each of us---physicians, professors, nurses, staff, employees—has the individual responsibility to do things right and to do the right things. This requires first that we understand the policies, rules and regulations that apply to the work that we do. It also means that we put our values into action, act with integrity, and comply with the law. 
 
 The Code of Conduct Manual provides practical guidelines that support our commitment to maintain integrity and compliance across MU Health.  This manual contains resources to help us resolve questions about appropriate conduct in our workplace. Please take a moment to read the manual and become familiar with these guidelines, so that we are successful in achieving the highest level of organizational integrity. 
@@ -224,7 +223,113 @@ Report anonymously by calling our Ethics and Compliance Hotline at (866) 447-982
 
 An investigation will begin promptly regarding the issue reported, and you will receive an update concerning the investigation when appropriate. 
 ")
-Page.create(quiz_module: qm1, number: 25, header: '', text: "")
+Page.create(quiz_module: qm1, number: 25, header: 'Reporting and non-retaliation', text: "Open lines of communication are critical to achieving organizational integrity. MU Health policy forbids retaliation against employees, faculty or staff who report concerns in good faith. 
+Reporting a concern is an expectation of your job, and will not put your job at risk.  
+Anyone who retaliates against a person who reports a concern in good faith is subject to disciplinary action.  
+As always, if you have any questions please do not hesitate to contact the Office of Corporate Compliance at (573)884-0632.  
+
+   Thank you for the work that you do to further our mission!")
+
+## Questions for Module 1
+### Question 1
+q1_m1 = Question.create(quiz_module: qm1, text: "I have read, understand and will comply with the requirements and standards of behavior defined in the Code of Conduct Manual. I understand that compliance with the Code of Conduct is mandatory.  I further understand that workforce members who violate applicable laws, rules, regulations, policies, or the Code of Conduct will be subject to disciplinary action in accordance with policies and procedures up to and including dismissal.")
+### Answers 1
+Answer.create(text: 'Yes', question_id: q1_m1)
+WrongAnswer.create(text: 'No', question_id: q1_m1)
+
+
+### Question 2
+q2_m1 = Question.create(quiz_module: qm1, text: "The Code of Conduct applies to:
+A. Administrators, directors and managers only.
+B. Physicians, teachers, residents, fellows and students.
+C. Vendors, independent contractors and volunteers.
+D. Full-time and part-time employees.
+E. All of the above.")
+### Answers 2
+WrongAnswer.create(question_id: q2_m1, text: 'A only')
+WrongAnswer.create(question_id: q2_m1, text: 'A and D')
+WrongAnswer.create(question_id: q2_m1, text: 'B, C, D')
+Answer.create(question_id: q2_m1, text: 'All of the above')
+
+
+### Question 3
+q3_m1 = Question.create(quiz_module: qm1, text: "An elderly patient, Mrs. Smith, complains to her nurse that during the night a lab technician came into her room, drew blood, then called her by the wrong name and left. Mrs. Smith does not think that the tech had the right patient. What should the nurse do next?")
+### Answers 3
+WrongAnswer.create(letter: 'A', question_id: q3_m1, text: 'Report the concern to her supervisor and call the lab to verify   what happened.')
+WrongAnswer.create(letter: 'B', question_id: q3_m1, text: 'Report the concern to the Patient Safety Network.')
+WrongAnswer.create(letter: 'C', question_id: q3_m1, text: 'Call the Ethics and Compliance Hotline.')
+Answer.create(letter: 'D', question_id: q3_m1, text: 'Any of the above is appropriate.')
+
+
+### Question 4
+q4_m1 = Question.create(quiz_module: qm1, text: "A lab technician sees a nurse reviewing medical records about a co-worker recently admitted to the hospital. The nurse is not involved with the care of the co-worker. What should the lab technician do?")
+### Answers 4
+WrongAnswer.create(letter: 'A', question_id: q4_m1, text: 'Nothing, obviously the nurse is concerned about the co-worker.')
+WrongAnswer.create(letter: 'B', question_id: q4_m1, text: 'Notify his/her supervisor.')
+WrongAnswer.create(letter: 'C', question_id: q4_m1, text: 'Contact the Office of Corporate Compliance to report the concern.')
+WrongAnswer.create(letter: 'D', question_id: q4_m1, text: 'Tell the nurse that she is violating privacy regulations.')
+Answer.create(letter: 'E', question_id: q4_m1, text: 'B and C')
+
+
+### Question 5
+q5_m1 = Question.create(quiz_module: qm1, text: "Which of the following is proper access of patient health information under the “Minimum Necessary Rule?”
+
+A. The treating physician accesses her patient’s lab results via the electronic medical record.
+B. A reimbursement specialist accesses the medical record to apply the proper code to the services provided for billing purposes.
+C. A medical student posts information concerning a patient she treated that day on Facebook.
+D. A nurse looks into the medical record of her friend who wants to know the results of her pathology report.")
+### Answers 5
+WrongAnswer.create(question_id: q5_m1, text: 'A only')
+Answer.create(question_id: q5_m1, text: 'A and B')
+WrongAnswer.create(question_id: q5_m1, text: 'A, B and D')
+WrongAnswer.create(question_id: q5_m1, text: 'All of the above')
+
+### Question 6
+q6_m1 = Question.create(quiz_module: qm1, text: "A coder is busy and submits several codes on a claim without first looking at the physician’s documentation. The coder is pretty sure the codes are accurate since this service is routinely performed by this particular physician. Is this coder’s action acceptable practice?")
+### Answers 6
+Answer.create(letter: 'A', question_id: q6_m1, text: 'No, and may be a violation of law.')
+WrongAnswer.create(letter: 'B', question_id: q6_m1, text: 'Yes, this action is permitted under Medicare regulations.')
+WrongAnswer.create(letter: 'C', question_id: q6_m1, text: 'Yes, according to laws preventing self-referrals.')
+WrongAnswer.create(letter: 'D', question_id: q6_m1, text: 'Yes, because the coder is familiar with this particular service and more than  likely submitted the correct codes.')
+
+
+
+### Question 7
+q7_m1 = Question.create(quiz_module: qm1, text: "A purchasing director is looking for tickets to the World Series game and asks a sales representative of a company that we purchase product from if he has access to tickets.  The sales representative offers the purchasing director two free tickets to the game if he agrees that the hospital will try a new product. Is this a violation of our conflict of interest policy?")
+### Answers 7
+WrongAnswer.create(letter: 'A', question_id: q7_m1, text: 'No, because the purchasing director did not pay for the tickets.')
+WrongAnswer.create(letter: 'B', question_id: q7_m1, text: 'No, because the purchasing director did not end up attending the game because he got sick.')
+Answer.create(letter: 'C', question_id: q7_m1, text: 'Yes, this is a violation of our conflict of interest policy.')
+WrongAnswer.create(letter: 'D', question_id: q7_m1, text: 'No, because the purchasing director did not tell anyone about the free tickets.')
+
+### Question 8
+q8_m1 = Question.create(quiz_module: qm1, text: "Which of the following examples violate our expectations of trust with confidential information?")
+### Answers 8
+WrongAnswer.create(letter: 'A', question_id: q8_m1, text: 'An administrative assistant contacts her cousin when she sees this relative’s name on the list for a clinical trial.')
+WrongAnswer.create(letter: 'B', question_id: q8_m1, text: 'A volunteer tells her roommate that she saw Debbie Darling, a local television personality, checking in to an oncology clinic where the administrative assistant works.')
+WrongAnswer.create(letter: 'C', question_id: q8_m1, text: 'A nurse posts on Facebook the miraculous recovery of a patient that she has been caring for over the past 2 weeks.')
+Answer.create(letter: 'D', question_id: q8_m1, text: 'All of the Above.')
+
+
+### Question 9
+q9_m1 = Question.create(quiz_module: qm1, text: "An employee who works in a busy clinic notices that her supervisor is constantly using her work computer to conduct business for her private consulting business that she runs out of her home. The employee should do which of the following:")
+### Answers 9
+WrongAnswer.create(letter: 'A', question_id: q9_m1, text: 'Nothing, since everyone else in that clinic uses their work computer for personal reasons.')
+WrongAnswer.create(letter: 'B', question_id: q9_m1, text: 'Nothing, since the employee could be retaliated against if the supervisor found out.')
+WrongAnswer.create(letter: 'C', question_id: q9_m1, text: 'Contact the Office of Corporate Compliance to report the concern.')
+WrongAnswer.create(letter: 'D', question_id: q9_m1, text: 'Call the Ethics and Compliance Hotline number to report the concern.')
+Answer.create(letter: 'E', question_id: q9_m1, text: 'C or D')
+
+
+### Question 10
+q10_m1 = Question.create(quiz_module: qm1, text: "")
+
+
+q11_m1 = Question.create(quiz_module: qm1, text: "")
+q12_m1 = Question.create(quiz_module: qm1, text: "")
+## END Questions for Module 1
+
+
 Page.create(quiz_module: qm1, number: 26, header: '', text: "")
 Page.create(quiz_module: qm1, number: 27, header: '', text: "")
 Page.create(quiz_module: qm1, number: 28, header: '', text: "")
@@ -242,4 +347,5 @@ Page.create(quiz_module: qm1, number: 39, header: '', text: "")
 Page.create(quiz_module: qm1, number: 40, header: '', text: "")
 Page.create(quiz_module: qm1, number: 41, header: '', text: "")
 Page.create(quiz_module: qm1, number: 42, header: '', text: "")
+## END Pages for Module 1
 
