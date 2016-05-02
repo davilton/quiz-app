@@ -1,4 +1,3 @@
-class WrongAnswer < Answer
-  belongs_to :question  
+class WrongAnswer < Answer  
 
 end

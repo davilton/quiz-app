@@ -234,9 +234,9 @@ As always, if you have any questions please do not hesitate to contact the Offic
 ### Question 1
 q1_m1 = Question.create(quiz_module: qm1, text: "I have read, understand and will comply with the requirements and standards of behavior defined in the Code of Conduct Manual. I understand that compliance with the Code of Conduct is mandatory.  I further understand that workforce members who violate applicable laws, rules, regulations, policies, or the Code of Conduct will be subject to disciplinary action in accordance with policies and procedures up to and including dismissal.")
 ### Answers 1
-Answer.create(text: 'Yes', question_id: q1_m1)
-WrongAnswer.create(text: 'No', question_id: q1_m1)
-
+Answer.create(text: 'Yes', question: q1_m1)
+WrongAnswer.create(text: 'No', question: q1_m1)
+Page.create(question: q1_m1, quiz_module: qm1, number: 26, header: '', text: "")
 
 ### Question 2
 q2_m1 = Question.create(quiz_module: qm1, text: "The Code of Conduct applies to:
@@ -246,30 +246,30 @@ C. Vendors, independent contractors and volunteers.
 D. Full-time and part-time employees.
 E. All of the above.")
 ### Answers 2
-WrongAnswer.create(question_id: q2_m1, text: 'A only')
-WrongAnswer.create(question_id: q2_m1, text: 'A and D')
-WrongAnswer.create(question_id: q2_m1, text: 'B, C, D')
-Answer.create(question_id: q2_m1, text: 'All of the above')
-
+WrongAnswer.create(question: q2_m1, text: 'A only')
+WrongAnswer.create(question: q2_m1, text: 'A and D')
+WrongAnswer.create(question: q2_m1, text: 'B, C, D')
+Answer.create(question: q2_m1, text: 'All of the above')
+Page.create(question: q2_m1, quiz_module: qm1, number: 27, header: '', text: "")
 
 ### Question 3
 q3_m1 = Question.create(quiz_module: qm1, text: "An elderly patient, Mrs. Smith, complains to her nurse that during the night a lab technician came into her room, drew blood, then called her by the wrong name and left. Mrs. Smith does not think that the tech had the right patient. What should the nurse do next?")
 ### Answers 3
-WrongAnswer.create(letter: 'A', question_id: q3_m1, text: 'Report the concern to her supervisor and call the lab to verify   what happened.')
-WrongAnswer.create(letter: 'B', question_id: q3_m1, text: 'Report the concern to the Patient Safety Network.')
-WrongAnswer.create(letter: 'C', question_id: q3_m1, text: 'Call the Ethics and Compliance Hotline.')
-Answer.create(letter: 'D', question_id: q3_m1, text: 'Any of the above is appropriate.')
-
+WrongAnswer.create(letter: 'A', question: q3_m1, text: 'Report the concern to her supervisor and call the lab to verify   what happened.')
+WrongAnswer.create(letter: 'B', question: q3_m1, text: 'Report the concern to the Patient Safety Network.')
+WrongAnswer.create(letter: 'C', question: q3_m1, text: 'Call the Ethics and Compliance Hotline.')
+Answer.create(letter: 'D', question: q3_m1, text: 'Any of the above is appropriate.')
+Page.create(question: q3_m1, quiz_module: qm1, number: 28, header: '', text: "")
 
 ### Question 4
 q4_m1 = Question.create(quiz_module: qm1, text: "A lab technician sees a nurse reviewing medical records about a co-worker recently admitted to the hospital. The nurse is not involved with the care of the co-worker. What should the lab technician do?")
 ### Answers 4
-WrongAnswer.create(letter: 'A', question_id: q4_m1, text: 'Nothing, obviously the nurse is concerned about the co-worker.')
-WrongAnswer.create(letter: 'B', question_id: q4_m1, text: 'Notify his/her supervisor.')
-WrongAnswer.create(letter: 'C', question_id: q4_m1, text: 'Contact the Office of Corporate Compliance to report the concern.')
-WrongAnswer.create(letter: 'D', question_id: q4_m1, text: 'Tell the nurse that she is violating privacy regulations.')
-Answer.create(letter: 'E', question_id: q4_m1, text: 'B and C')
-
+WrongAnswer.create(letter: 'A', question: q4_m1, text: 'Nothing, obviously the nurse is concerned about the co-worker.')
+WrongAnswer.create(letter: 'B', question: q4_m1, text: 'Notify his/her supervisor.')
+WrongAnswer.create(letter: 'C', question: q4_m1, text: 'Contact the Office of Corporate Compliance to report the concern.')
+WrongAnswer.create(letter: 'D', question: q4_m1, text: 'Tell the nurse that she is violating privacy regulations.')
+Answer.create(letter: 'E', question: q4_m1, text: 'B and C')
+Page.create(question: q4_m1, quiz_module: qm1, number: 29, header: '', text: "")
 
 ### Question 5
 q5_m1 = Question.create(quiz_module: qm1, text: "Which of the following is proper access of patient health information under the “Minimum Necessary Rule?”
@@ -279,73 +279,105 @@ B. A reimbursement specialist accesses the medical record to apply the proper co
 C. A medical student posts information concerning a patient she treated that day on Facebook.
 D. A nurse looks into the medical record of her friend who wants to know the results of her pathology report.")
 ### Answers 5
-WrongAnswer.create(question_id: q5_m1, text: 'A only')
-Answer.create(question_id: q5_m1, text: 'A and B')
-WrongAnswer.create(question_id: q5_m1, text: 'A, B and D')
-WrongAnswer.create(question_id: q5_m1, text: 'All of the above')
+WrongAnswer.create(question: q5_m1, text: 'A only')
+Answer.create(question: q5_m1, text: 'A and B')
+WrongAnswer.create(question: q5_m1, text: 'A, B and D')
+WrongAnswer.create(question: q5_m1, text: 'All of the above')
+Page.create(question: q5_m1, quiz_module: qm1, number: 30, header: '', text: "")
+
 
 ### Question 6
 q6_m1 = Question.create(quiz_module: qm1, text: "A coder is busy and submits several codes on a claim without first looking at the physician’s documentation. The coder is pretty sure the codes are accurate since this service is routinely performed by this particular physician. Is this coder’s action acceptable practice?")
 ### Answers 6
-Answer.create(letter: 'A', question_id: q6_m1, text: 'No, and may be a violation of law.')
-WrongAnswer.create(letter: 'B', question_id: q6_m1, text: 'Yes, this action is permitted under Medicare regulations.')
-WrongAnswer.create(letter: 'C', question_id: q6_m1, text: 'Yes, according to laws preventing self-referrals.')
-WrongAnswer.create(letter: 'D', question_id: q6_m1, text: 'Yes, because the coder is familiar with this particular service and more than  likely submitted the correct codes.')
-
+Answer.create(letter: 'A', question: q6_m1, text: 'No, and may be a violation of law.')
+WrongAnswer.create(letter: 'B', question: q6_m1, text: 'Yes, this action is permitted under Medicare regulations.')
+WrongAnswer.create(letter: 'C', question: q6_m1, text: 'Yes, according to laws preventing self-referrals.')
+WrongAnswer.create(letter: 'D', question: q6_m1, text: 'Yes, because the coder is familiar with this particular service and more than  likely submitted the correct codes.')
+Page.create(question: q6_m1, quiz_module: qm1, number: 31, header: '', text: "")
 
 
 ### Question 7
 q7_m1 = Question.create(quiz_module: qm1, text: "A purchasing director is looking for tickets to the World Series game and asks a sales representative of a company that we purchase product from if he has access to tickets.  The sales representative offers the purchasing director two free tickets to the game if he agrees that the hospital will try a new product. Is this a violation of our conflict of interest policy?")
 ### Answers 7
-WrongAnswer.create(letter: 'A', question_id: q7_m1, text: 'No, because the purchasing director did not pay for the tickets.')
-WrongAnswer.create(letter: 'B', question_id: q7_m1, text: 'No, because the purchasing director did not end up attending the game because he got sick.')
-Answer.create(letter: 'C', question_id: q7_m1, text: 'Yes, this is a violation of our conflict of interest policy.')
-WrongAnswer.create(letter: 'D', question_id: q7_m1, text: 'No, because the purchasing director did not tell anyone about the free tickets.')
+WrongAnswer.create(letter: 'A', question: q7_m1, text: 'No, because the purchasing director did not pay for the tickets.')
+WrongAnswer.create(letter: 'B', question: q7_m1, text: 'No, because the purchasing director did not end up attending the game because he got sick.')
+Answer.create(letter: 'C', question: q7_m1, text: 'Yes, this is a violation of our conflict of interest policy.')
+WrongAnswer.create(letter: 'D', question: q7_m1, text: 'No, because the purchasing director did not tell anyone about the free tickets.')
+Page.create(question: q7_m1, quiz_module: qm1, number: 32, header: '', text: "")
+
 
 ### Question 8
 q8_m1 = Question.create(quiz_module: qm1, text: "Which of the following examples violate our expectations of trust with confidential information?")
 ### Answers 8
-WrongAnswer.create(letter: 'A', question_id: q8_m1, text: 'An administrative assistant contacts her cousin when she sees this relative’s name on the list for a clinical trial.')
-WrongAnswer.create(letter: 'B', question_id: q8_m1, text: 'A volunteer tells her roommate that she saw Debbie Darling, a local television personality, checking in to an oncology clinic where the administrative assistant works.')
-WrongAnswer.create(letter: 'C', question_id: q8_m1, text: 'A nurse posts on Facebook the miraculous recovery of a patient that she has been caring for over the past 2 weeks.')
-Answer.create(letter: 'D', question_id: q8_m1, text: 'All of the Above.')
-
+WrongAnswer.create(letter: 'A', question: q8_m1, text: 'An administrative assistant contacts her cousin when she sees this relative’s name on the list for a clinical trial.')
+WrongAnswer.create(letter: 'B', question: q8_m1, text: 'A volunteer tells her roommate that she saw Debbie Darling, a local television personality, checking in to an oncology clinic where the administrative assistant works.')
+WrongAnswer.create(letter: 'C', question: q8_m1, text: 'A nurse posts on Facebook the miraculous recovery of a patient that she has been caring for over the past 2 weeks.')
+Answer.create(letter: 'D', question: q8_m1, text: 'All of the Above.')
+Page.create(question: q8_m1, quiz_module: qm1, number: 33, header: '', text: "")
 
 ### Question 9
 q9_m1 = Question.create(quiz_module: qm1, text: "An employee who works in a busy clinic notices that her supervisor is constantly using her work computer to conduct business for her private consulting business that she runs out of her home. The employee should do which of the following:")
 ### Answers 9
-WrongAnswer.create(letter: 'A', question_id: q9_m1, text: 'Nothing, since everyone else in that clinic uses their work computer for personal reasons.')
-WrongAnswer.create(letter: 'B', question_id: q9_m1, text: 'Nothing, since the employee could be retaliated against if the supervisor found out.')
-WrongAnswer.create(letter: 'C', question_id: q9_m1, text: 'Contact the Office of Corporate Compliance to report the concern.')
-WrongAnswer.create(letter: 'D', question_id: q9_m1, text: 'Call the Ethics and Compliance Hotline number to report the concern.')
-Answer.create(letter: 'E', question_id: q9_m1, text: 'C or D')
-
+WrongAnswer.create(letter: 'A', question: q9_m1, text: 'Nothing, since everyone else in that clinic uses their work computer for personal reasons.')
+WrongAnswer.create(letter: 'B', question: q9_m1, text: 'Nothing, since the employee could be retaliated against if the supervisor found out.')
+WrongAnswer.create(letter: 'C', question: q9_m1, text: 'Contact the Office of Corporate Compliance to report the concern.')
+WrongAnswer.create(letter: 'D', question: q9_m1, text: 'Call the Ethics and Compliance Hotline number to report the concern.')
+Answer.create(letter: 'E', question: q9_m1, text: 'C or D')
+Page.create(question: q9_m1, quiz_module: qm1, number: 34, header: '', text: "")
 
 ### Question 10
-q10_m1 = Question.create(quiz_module: qm1, text: "")
+q10_m1 = Question.create(quiz_module: qm1, text: "In his eagerness to begin a potentially well-funded research project that involves human subjects. Dr. Discovery begins enrolling human subjects for the clinical trial before receiving approval from the Institutional Review Board. Dr. Discovery’s actions are:")
+### Answers 10
+WrongAnswer.create(letter: 'A', question: q10_m1, text: 'A violation of MU Health policy that provides safeguards regarding human subjects research.')
+WrongAnswer.create(letter: 'B', question: q10_m1, text: 'A violation of HIPAA/privacy rules.')
+WrongAnswer.create(letter: 'C', question: q10_m1, text: 'A violation of our ethical standards.')
+Answer.create(letter: 'D', question: q10_m1, text: 'A and C')
+WrongAnswer.create(letter: 'E', question: q10_m1, text: 'All of the above.')
+Page.create(question: q10_m1, quiz_module: qm1, number: 35, header: '', text: "")
+
+### Question 11
+q11_m1 = Question.create(quiz_module: qm1, text: "An audit of a clinical trial reveals that the sponsor of the trial was not billed for research-related services and instead, the participant’s insurance company was billed in violation of the contract. What actions should be taken next?")
+WrongAnswer.create(letter: 'A', question: q11_m1, text: '')
+WrongAnswer.create(letter: 'B', question: q11_m1, text: '')
+WrongAnswer.create(letter: 'C', question: q11_m1, text: '')
+WrongAnswer.create(letter: 'D', question: q11_m1, text: '')
+Page.create(question: q11_m1, quiz_module: qm1, number: 36, header: '', text: "")
 
 
-q11_m1 = Question.create(quiz_module: qm1, text: "")
-q12_m1 = Question.create(quiz_module: qm1, text: "")
+### Question 12
+Page.create(quiz_module: qm1, number: 37, header: 'Scenario', text: "Sara’s work for the MU Health System involves direct patient care with newborns and their families.  Sara must sometimes send patient information to external referring physicians.
+
+She is an avid fan of social media networking and regularly uses social media to communicate with family and friends.  She sometimes uses YouTube tutorials to learn new skills and follows her employer on Facebook and Twitter.
+
+Sara occasionally receives friend requests on Facebook from patients as well as co-workers.  Sometimes Sara “talks” about her patients on Facebook and posts pictures of the cute newborns she cares for.
+
+Last night she noticed David, one on her Facebook friends who also works for the same health care system, had posted some ugly comments about his supervisor and the patients he cares for.  Sara was embarrassed by his comments.
+
+Continue to the “Next” slide to answer questions regarding the scenario.")
+q12_m1 = Question.create(quiz_module: qm1, text: "Which of the following statements are true with regard to Sara’s social media activities?")
+### Answers 12
+WrongAnswer.create(letter: 'A', question: q12_m1, text: 'Guidelines prohibit taking photos of patients without consent from  the patient or a representative and the attending physician.')
+WrongAnswer.create(letter: 'B', question: q12_m1, text: 'Sara violated patient privacy by taking the photos and posting to a social  media site.')
+WrongAnswer.create(letter: 'C', question: q12_m1, text: 'Sara will be subject to disciplinary action and may even lose her job for posting information about patients on Facebook.')
+Answer.create(letter: 'D', question: q12_m1, text: 'All of the above.')
+Page.create(question: q12_m1, quiz_module: qm1, number: 38, header: '', text: '')
+
+### Question 13
+Page.create(quiz_module: qm1, number: 38, header: 'Scenario', text: 'Ben is in charge of ordering medical and pharmaceutical supplies for the specialty clinic in which he works. He works closely with vendors and has developed a friendly working relationship with them. Ben holds a part-time job with one of the durable medical equipment vendors. His spouse works for one of the drug company vendors. 
+
+Several of the pharmaceutical companies provide education on new drugs for the clinic physicians and often cater lunch for them. Some vendors send fruit baskets during the holidays. One vendor has even offered to pay Ben’s way to a convention he wants to attend in San Francisco.
+
+
+Continue to the “Next” slide to answer questions regarding the scenario.')
+q13_m1 = Question.create(quiz_module: qm1, text: "Is Ben’s part-time job for the medical product vendor or his spouse’s employment with the drug company with whom he does business considered a potential conflict of interest and must he disclose it?")
+### Answers 13
+WrongAnswer.create(letter: 'A', question: q13_m1, text: 'No, these outside positions have  nothing to do with his regular duties so Ben does not need  to disclose.')
+WrongAnswer.create(letter: 'B', question: q13_m1, text: 'No, even though this could influence his decisions, Ben is sure he is an ethical person and knows he would never allow the relationship to influence his decisions.')
+WrongAnswer.create(letter: 'C', question: q13_m1, text: 'Yes, working part-time for a company from which Ben may order supplies must be reported as a potential conflict of interest.')
+WrongAnswer.create(letter: 'D', question: q13_m1, text: 'Yes, his wife’s employment with a drug company from which Ben may order pharmaceutical products is also a potential conflict of interest and must be reported.')
+Answer.create(letter: 'E', question: q13_m1, text: 'C and D ')
+Page.create(question: q13_m1, quiz_module: qm1, number: 38, header: '', text: '')
 ## END Questions for Module 1
-
-
-Page.create(quiz_module: qm1, number: 26, header: '', text: "")
-Page.create(quiz_module: qm1, number: 27, header: '', text: "")
-Page.create(quiz_module: qm1, number: 28, header: '', text: "")
-Page.create(quiz_module: qm1, number: 29, header: '', text: "")
-Page.create(quiz_module: qm1, number: 30, header: '', text: "")
-Page.create(quiz_module: qm1, number: 31, header: '', text: "")
-Page.create(quiz_module: qm1, number: 32, header: '', text: "")
-Page.create(quiz_module: qm1, number: 33, header: '', text: "")
-Page.create(quiz_module: qm1, number: 34, header: '', text: "")
-Page.create(quiz_module: qm1, number: 35, header: '', text: "")
-Page.create(quiz_module: qm1, number: 36, header: '', text: "")
-Page.create(quiz_module: qm1, number: 37, header: '', text: "")
-Page.create(quiz_module: qm1, number: 38, header: '', text: "")
-Page.create(quiz_module: qm1, number: 39, header: '', text: "")
-Page.create(quiz_module: qm1, number: 40, header: '', text: "")
-Page.create(quiz_module: qm1, number: 41, header: '', text: "")
-Page.create(quiz_module: qm1, number: 42, header: '', text: "")
 ## END Pages for Module 1
 
+# Page.create(quiz_module: qm1, number: 27, header: '', text: "")
