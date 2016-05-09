@@ -6,4 +6,7 @@ h4
 -if @page.question
   p= @page.question.text
 
+  - @page.question.answers.each do |a|
+    p #{a.letter.present? ? "#{a.letter}. " : " "} #{a.text}
+
 p= next_page @page
