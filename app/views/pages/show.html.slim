@@ -6,7 +6,9 @@ h4
 -if @page.question
   p= @page.question.text
 
-  - @page.question.answers.each do |a|
-    p #{a.letter.present? ? "#{a.letter}. " : " "} #{a.text}
-
+  = simple_form_for @scoring do |f|
+    / - @page.question.answers.each do |a|
+    / #{a.letter.present? ? "#{a.letter}. " : " "} #{a.text}
+    = f.association :answer, label_method: :answer_label, collection: @page.question.answers, as: :radio_buttons  
+    = f.button :submit
 p= next_page @page

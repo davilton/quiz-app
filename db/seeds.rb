@@ -380,4 +380,24 @@ Page.create(question: q13_m1, quiz_module: qm1, number: 38, header: '', text: ''
 ## END Questions for Module 1
 ## END Pages for Module 1
 
+## Pages for Module 2
+
+
+
+
+
+Page.create(question: '', quiz_module: qm2, number: 1, header: '', text: '')
+
+
+
+## Questions for  Module 2
+q1_m2 = Question.create(quiz_module: qm2, text: "Once a corrective action plan is started, the corrective actions must be monitored annually to ensure they are effective. Select the correct answer.")
+
+WrongAnswer.create(letter: 'A',)
+Answer.create(letter: 'B')
+
+
+
+
+
 # Page.create(quiz_module: qm1, number: 27, header: '', text: "")

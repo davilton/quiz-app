@@ -5,4 +5,9 @@ class Answer < ActiveRecord::Base
 
   scope :answer, -> { where(type: nil).first }
   scope :wrong_answers, ->{ where type: 'WrongAnswer' }
+
+
+  def answer_label
+    letter.present? ? "#{letter}. #{text}" : "#{text}"
+  end
 end

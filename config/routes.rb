@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 		get '/start' => 'pages#start'
 		resources :pages, only: [:index, :show]
 	end
+  resources :scorings
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
