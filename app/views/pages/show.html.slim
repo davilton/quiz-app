@@ -9,6 +9,10 @@ h4
   = simple_form_for @scoring do |f|
     / - @page.question.answers.each do |a|
     / #{a.letter.present? ? "#{a.letter}. " : " "} #{a.text}
-    = f.association :answer, label_method: :answer_label, collection: @page.question.answers, as: :radio_buttons  
-    = f.button :submit
-p= next_page @page
+    = f.association :answer, label_method: :answer_label, collection: @page.question.answers, as: :radio_buttons 
+    = f.input :current_page, as: :hidden, input_html: {value: @page.number}
+    = f.input :quiz_module, as: :hidden, input_html: {value: @page.quiz_module.id}
+    = f.button :submit, value: "Submit"
+
+- unless @page.question
+  p= next_page @page

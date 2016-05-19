@@ -13,6 +13,7 @@ class PagesController < ApplicationController
 		@quiz = QuizModule.find(params[:quiz_module_id])
 		@pages = @quiz.pages.sort_by{|x| x.number.to_i}
 		@page = @pages.first
+		cookies[:current_score_id] = Score.create(quiz_module: @quiz).id
 		redirect_to quiz_module_page_path(@quiz, @page)
 	end
 

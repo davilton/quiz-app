@@ -337,10 +337,10 @@ Page.create(question: q10_m1, quiz_module: qm1, number: 35, header: '', text: ""
 
 ### Question 11
 q11_m1 = Question.create(quiz_module: qm1, text: "An audit of a clinical trial reveals that the sponsor of the trial was not billed for research-related services and instead, the participant’s insurance company was billed in violation of the contract. What actions should be taken next?")
-WrongAnswer.create(letter: 'A', question: q11_m1, text: '')
-WrongAnswer.create(letter: 'B', question: q11_m1, text: '')
-WrongAnswer.create(letter: 'C', question: q11_m1, text: '')
-WrongAnswer.create(letter: 'D', question: q11_m1, text: '')
+WrongAnswer.create(letter: 'A', question: q11_m1, text: 'Contact the Coordinator for Compliance Research Billing to initiate charge correction.')
+WrongAnswer.create(letter: 'B', question: q11_m1, text: 'Nothing, since payment has already been made by the insurance company.')
+WrongAnswer.create(letter: 'C', question: q11_m1, text: 'Educate and train the investigator and her study team to reinforce the importance of billing according to contract terms and Federal regulations.')
+Answer.create(letter: 'D', question: q11_m1, text: 'A and C')
 Page.create(question: q11_m1, quiz_module: qm1, number: 36, header: '', text: "")
 
 
@@ -363,12 +363,13 @@ Answer.create(letter: 'D', question: q12_m1, text: 'All of the above.')
 Page.create(question: q12_m1, quiz_module: qm1, number: 38, header: '', text: '')
 
 ### Question 13
-Page.create(quiz_module: qm1, number: 38, header: 'Scenario', text: 'Ben is in charge of ordering medical and pharmaceutical supplies for the specialty clinic in which he works. He works closely with vendors and has developed a friendly working relationship with them. Ben holds a part-time job with one of the durable medical equipment vendors. His spouse works for one of the drug company vendors. 
+Page.create(quiz_module: qm1, number: 39, header: 'Scenario', text: 'Ben is in charge of ordering medical and pharmaceutical supplies for the specialty clinic in which he works. He works closely with vendors and has developed a friendly working relationship with them. Ben holds a part-time job with one of the durable medical equipment vendors. His spouse works for one of the drug company vendors. 
 
 Several of the pharmaceutical companies provide education on new drugs for the clinic physicians and often cater lunch for them. Some vendors send fruit baskets during the holidays. One vendor has even offered to pay Ben’s way to a convention he wants to attend in San Francisco.
 
 
 Continue to the “Next” slide to answer questions regarding the scenario.')
+
 q13_m1 = Question.create(quiz_module: qm1, text: "Is Ben’s part-time job for the medical product vendor or his spouse’s employment with the drug company with whom he does business considered a potential conflict of interest and must he disclose it?")
 ### Answers 13
 WrongAnswer.create(letter: 'A', question: q13_m1, text: 'No, these outside positions have  nothing to do with his regular duties so Ben does not need  to disclose.')
@@ -376,28 +377,20 @@ WrongAnswer.create(letter: 'B', question: q13_m1, text: 'No, even though this co
 WrongAnswer.create(letter: 'C', question: q13_m1, text: 'Yes, working part-time for a company from which Ben may order supplies must be reported as a potential conflict of interest.')
 WrongAnswer.create(letter: 'D', question: q13_m1, text: 'Yes, his wife’s employment with a drug company from which Ben may order pharmaceutical products is also a potential conflict of interest and must be reported.')
 Answer.create(letter: 'E', question: q13_m1, text: 'C and D ')
-Page.create(question: q13_m1, quiz_module: qm1, number: 38, header: '', text: '')
+Page.create(question: q13_m1, quiz_module: qm1, number: 40, header: 'Scenario', text: '')
+
+Page.create( quiz_module: qm1, number: 41, header: 'End of Module', text: '')
+
+# Page.create(question: '', quiz_module: 'qm1', number: '', header: '', text: '')
+
 ## END Questions for Module 1
 ## END Pages for Module 1
 
 ## Pages for Module 2
 
-
-
-
-
-Page.create(question: '', quiz_module: qm2, number: 1, header: '', text: '')
-
-
-
 ## Questions for  Module 2
-q1_m2 = Question.create(quiz_module: qm2, text: "Once a corrective action plan is started, the corrective actions must be monitored annually to ensure they are effective. Select the correct answer.")
+# q1_m2 = Question.create(quiz_module: qm2, text: "Once a corrective action plan is started, the corrective actions must be monitored annually to ensure they are effective. Select the correct answer.")
 
-WrongAnswer.create(letter: 'A',)
-Answer.create(letter: 'B')
+# WrongAnswer.create(letter: 'A',)
+# Answer.create(letter: 'B')
 
-
-
-
-
-# Page.create(quiz_module: qm1, number: 27, header: '', text: "")

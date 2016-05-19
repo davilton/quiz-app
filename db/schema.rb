@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160501215740) do
+ActiveRecord::Schema.define(version: 20160517135032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,9 +56,12 @@ ActiveRecord::Schema.define(version: 20160501215740) do
   end
 
   create_table "scores", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "quiz_module_id"
   end
+
+  add_index "scores", ["quiz_module_id"], name: "index_scores_on_quiz_module_id", using: :btree
 
   create_table "scorings", force: :cascade do |t|
     t.integer  "score_id"
@@ -73,4 +76,5 @@ ActiveRecord::Schema.define(version: 20160501215740) do
   add_foreign_key "answers", "questions"
   add_foreign_key "pages", "quiz_modules"
   add_foreign_key "questions", "quiz_modules"
+  add_foreign_key "scores", "quiz_modules"
 end
