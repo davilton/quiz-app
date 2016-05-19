@@ -7,6 +7,8 @@ module PagesHelper
 		  link_to 'Next Page', quiz_module_page_path(qm, next_page) 
 		else
 			# last page
+			
+			link_to "Submit Score"
 		end
 
   end

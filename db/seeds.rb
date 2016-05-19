@@ -379,7 +379,7 @@ WrongAnswer.create(letter: 'D', question: q13_m1, text: 'Yes, his wife’s emplo
 Answer.create(letter: 'E', question: q13_m1, text: 'C and D ')
 Page.create(question: q13_m1, quiz_module: qm1, number: 40, header: 'Scenario', text: '')
 
-Page.create( quiz_module: qm1, number: 41, header: 'End of Module', text: '')
+Page.create( quiz_module: qm1, number: 41, header: 'End of Module', text: "Congratulations! You have now completed the module.")
 
 # Page.create(question: '', quiz_module: 'qm1', number: '', header: '', text: '')
 

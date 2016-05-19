@@ -9,6 +9,10 @@ class ScoresController < ApplicationController
 #     redirect_to quiz_module_page_path quiz
 #   end
 
+  def grade
+    
+  end
+
 # private
 #   def score_params
 #     params.require(:score).permit(:quiz_module)
